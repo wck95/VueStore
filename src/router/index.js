@@ -2,57 +2,11 @@ import Vue from 'vue'
 //导入router插件
 import VueRouter from 'vue-router'
 
-const Page401 = () => import ('#common/errors/401')
-const Page404 = () => import ('#common/errors/404')
-const Home = () => import ('@/views/homePage/home')
-const Category = () => import ('@/views/categoryPage/category')
-const Cart = () => import ('@/views/cartPage/cart')
-const Profile = () => import ('@/views/profilePage/profile')
+import {routes} from "./routes_path"
 
 //注册router
 Vue.use(VueRouter);
 
-const routes = [
-  {
-    path: '' , name: 'Home', component: Home, 
-  },
-    {
-      path: '/home' , name: 'Home', component: Home, 
-      meta:{
-        title: '首页'
-      },
-    },
-    {
-      path: '/category' , name: 'Category', component: Category, 
-      meta:{
-        title: '分类'
-      },
-    },
-    {
-      path: '/cart' , name: 'Cart', component: Cart, 
-      meta:{
-        title: '购物车'
-      },
-    },
-    {
-      path: '/profile' , name: 'Profile', component: Profile,
-      meta:{
-        title: '我的'
-      }, 
-    },
-    {
-      path: '/401' , name: 'Page401', component: Page401, 
-      meta:{
-        title: '401'
-      },
-    },
-    {
-      path: '*' , name: 'Page404', component: Page404, 
-      meta:{
-        title: '404'
-      },
-    },
-];
 
 //创建router实例
 const router = new VueRouter({

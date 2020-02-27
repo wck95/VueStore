@@ -7,7 +7,7 @@
 
 <script>
 
-  const HomeTabBar = () => import ('content/main/homeTabBar');
+  const HomeTabBar = () => import ('content/home/homeTabBar');
 
   export default {
     name: 'App',
