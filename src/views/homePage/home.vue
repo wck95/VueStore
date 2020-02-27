@@ -1,9 +1,7 @@
 <template>
   <div id="home">
     <nav-bar>
-      <div slot="center">
-        <font> 购物街</font>
-      </div>
+      <div slot="center"><font> 购物街</font></div>
     </nav-bar>
   </div>
 </template>
